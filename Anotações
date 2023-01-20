@@ -1,0 +1,29 @@
+Anotações:
+
+CSS:
+	Id
+		posso fazer alteração estetica css de um comando colacando um "id" no item
+		exemplo no "titulo principal" o "id" é unico não podendo ser usando em outra tag, usa o # no arquivo css
+	class
+		existe também a "class" que pode ser usada em mais de uma tag, pode ser usada em todas as<br/>
+		tag que vc deseja que receba aquela class especifica exemplo na tag 'p', usar o "." no arquivo css
+		pode fazer um comando para duas seleçoes também
+	cores
+		exite varias forma de aplicar cor a uma tag sendo elas
+		1) escrevendo o nome da cor em ingles
+		2)escrendo a propoção das cores que vc que em bits em rbg(vermelho, verde, azul) os numeros indo de 0 a 255 em todas as 3 cores
+		3) escrevendo a propoção das cores em hexadecimal #ff9c2f sendo cada par uma das 3 cores primarias vermelho, verde e azul nessa ordem
+	borda
+		border
+		nessa propriedade vc trabalha com 3 informações diferentes "border: tamanho, tipo_de_borda, cor"
+			tipo de borda; solid, dashed, dotted, double, groove.
+	Padding
+		Padding
+		vai se referir a o espaçamento interno de uma da tag, ex: "padding: 10px;", ou espaçamento em todas as direções no
+		sentido horario começando pelo top ate esqueda "padding:500px 100px 600px 900px;" ou espaçamento isolados "paddimg-top: 50px;"
+	Margin
+		Vai se referir ao expaçamento externo de uma tag ex: "margins: 10px;"
+	Width
+		Largura de uma tag podendo ser definida por pixel, porcentagem, automatico e centimetros
+	height
+		Altura de uma tag podendo ser definida por pixel, porcentagem, automatico e centimetros

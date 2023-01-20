@@ -8,11 +8,26 @@ body {
 }
 
 p {
+    /*Muda a cor da fonte */
     color: #0f00ff;
+    /*Muda o tamanho da fonte*/
     font-size: 20px;
+    /*Coloca o texto em negrito*/
     font-weight: bold;
+    /* Muda o tipo da fonte*/
     font-family: 'Kolker Brush', cursive;
-    text-align: justify;
+    /* Muda o alinhamento, podendo ser a left, ringht, center, justify(alinhado) etc*/
+    text-align:justify;
+    /*Coloca todo o texto em caixa alta*/
+    text-transform: uppercase;
+    /*Coloca todo o texto em minusculo*/
+    text-transform: lowercase;
+    /*Coloca um exparçamento entre as letras*/
+    letter-spacing: 2px;
+    /*Coloca um exparçamento entre as palavras*/
+    word-spacing: 5px;
+    /*Coloca uma sobra no texto, tendo 3 parametros, (lado, baixo, dencidade e cor)*/
+    text-shadow: 2px 3px 3px red;
 
 }
 a{
