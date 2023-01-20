@@ -1,3 +1,12 @@
+div {
+    background-color: #ff2fa8;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border:3px solid #108a24f8;
+    
+    
+}
 h1{
     color:blue;
     font-size:25px;
@@ -34,12 +43,4 @@ li{
 p{
     border:5px dashed #d2c5a8
 }
-div {
-    background-color: #ff2fa8;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    border:3px solid #108a24f8;
-    
-    
-}
+
