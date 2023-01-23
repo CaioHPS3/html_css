@@ -18,16 +18,93 @@
 
     </p>
 
-    <h2>Área de Login</h2>
-    <form>
-        <input />
+
+   <h2>Área de Cadastro</h2>
+
+    <!-- A tag "form" serve para vc criar formulario tendo que ser criado dentro dessa tag
+            O atributo "action" recebe uma URL direcionando para onde vai os dados do formulario
+            O atributo method indica o tipo de envio, podendo ser o GET(informação aparece na url) e post   -->
+    <form action="login.html" method="GET">
+        <!--A tag input indica o campo onde vai ser inserido as informações 
+            os atributos vão sendo o mais conhecido o "type" podendo receber varios estilos;
+            text, password(para senhas), checkbox(caixinha), radio(Só pode ser usada com duas ou mais
+            gerando "bolinhas" podendo ser marcada só uma), submit(Gera o button de envio),
+            email(igual o text só que formatado para email), tel(telefone sem formatação), date(data)
+
+        
+            tag nome da a nomenclatura do input
+            tag value informa o "tipo" do input 
+        
+            A tag label é ultilizada para colocar o titulo nos campos a serem preenchidos,
+            dessa forma a tag pode (1)englobar o input ou utilizando o atributo "for" ultilzando 
+            o id do input-->
+            <!-- 1 -->
+        <label>
+            Digite seu nome:<br>
+            <input type="text" name="nome-do-usario" value="Nome"/> 
+        </label><br>
+        <!-- 2 -->
+        <label for="email">Digite seu email:</label> <br>
+        <input type="email" name="email" value="email" id="email"/> <br>
+        <label>
+            Telefone:<br>
+            <input type="tel" name="Telefone" value="(94)9 9666-4397"/> <br>
+        </label>
+        <label>
+            Senha:<br>
+            <input type="password" name="senha" value="*******"/> <br>
+        </label>
+        <label>
+            Data de nascimento:<br>
+            <input type="date" name="DataCriação"/> <br>
+        </label>
+        <label>
+            Li e aceito todo os termos
+            <input type="checkbox"><br>
+        </label>
+
+        <label>
+            Masculino
+            <input type="radio" name="sexo" id="sexo">
+            Feminino
+            <input type="radio" name="sexo" id="sexo">
+            Sei la
+            <input type="radio" name="sexo" id="sexo">
+        </label><br>
+
+        <input type="submit" value="Fazer cadastro"/> 
+
     </form>
-    <h2>Área de Cadastro</h2>
+
+
+    <h2>Área de Login</h2>
+
     <form action="login.html" method="GET">
 
-        <input type="text" nome="usuario"/>
+        <input type="email" nome="email" value="email"/> <br>
+        <input type="password" nome="senha" value="*******"/> <br>
+        <input type="submit" value="Fazer login"/>
 
-        <input type="submit"/>
+        <p>Por que vc quer fazer login ?</p>
+        <!--O elemento HTML select (<select>) representa um controle que apresenta um menu de opções. 
+            As opções dentro do menu são representadas pelo elemento <option>, com o atributo "multiple"
+            vc pode escolher mais de uma das opções so select e o "size" delimita a quantidade de item 
+            que podem ser vistos -->
+        <select name="motivo" id="motivo", size="1" multiple>
+            <!--Com o atrinuto value no option vc pode enviar informação de acordo com a opção do usario
+                caso não seja ultilizado a informação a ser enviada vai ser a mesma que o usario 
+                escolheu, por padrão o primeiro option vem pré selecionado mas com a atributo selected
+                podesse fixar o option desejado -->
+            <option></option>
+            <option value="DeBoa" selected>Tenho uma conta</option>
+            <option value="Hack">Meu tio tem uma conta</option>
+        </select>
+
+
+        <!--Tag textarea cria com se fosse uma caixa de texto -->
+
+        <p>De a descrição da sua conta</p>
+        <textarea name="descrição" cols="30" rows="10">teste</textarea>
 
     </form>
 
