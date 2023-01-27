@@ -40,27 +40,28 @@
             o id do input-->
             <!-- 1 -->
         <label>
-            Digite seu nome:<br>
+            Digite seu nome:<br/>
             <input type="text" name="nome-do-usario" value="Nome"/> 
-        </label><br>
+        </label>
         <!-- 2 -->
-        <label for="email">Digite seu email:</label> <br>
-        <input type="email" name="email" value="email" id="email"/> <br>
+        <label for="email">Digite seu email:<br/>
+            <input type="email" name="email" value="email" id="email"/>
+        </label> 
         <label>
-            Telefone:<br>
-            <input type="tel" name="Telefone" value="(94)9 9666-4397"/> <br>
+            Telefone:<br/>
+            <input type="tel" name="Telefone" value="(94)9 9666-4397"/> 
         </label>
         <label>
-            Senha:<br>
-            <input type="password" name="senha" value="*******"/> <br>
+            Senha:<br/>
+            <input type="password" name="senha" value="*******"/> 
         </label>
         <label>
-            Data de nascimento:<br>
-            <input type="date" name="DataCriação"/> <br>
+            Data de nascimento:<br/>
+            <input type="date" name="DataCriação"/> 
         </label>
         <label>
-            Li e aceito todo os termos
-            <input type="checkbox"><br>
+            Li e aceito todo os termos:
+            <input type="checkbox">
         </label>
 
         <label>
@@ -70,9 +71,9 @@
             <input type="radio" name="sexo" id="sexo">
             Sei la
             <input type="radio" name="sexo" id="sexo">
-        </label><br>
+        </label>
 
-        <input type="submit" value="Fazer cadastro"/> 
+        <button>Fazer Cadastro</button>
 
     </form>
 
@@ -90,7 +91,7 @@
             As opções dentro do menu são representadas pelo elemento <option>, com o atributo "multiple"
             vc pode escolher mais de uma das opções so select e o "size" delimita a quantidade de item 
             que podem ser vistos -->
-        <select name="motivo" id="motivo", size="1" multiple>
+        <select name="motivo" id="motivo">
             <!--Com o atrinuto value no option vc pode enviar informação de acordo com a opção do usario
                 caso não seja ultilizado a informação a ser enviada vai ser a mesma que o usario 
                 escolheu, por padrão o primeiro option vem pré selecionado mas com a atributo selected
@@ -98,6 +99,11 @@
             <option></option>
             <option value="DeBoa" selected>Tenho uma conta</option>
             <option value="Hack">Meu tio tem uma conta</option>
+            <option value="Hack">Minha tia tem uma conta</option>
+            <option value="Hack">Meu primo tem uma conta</option>
+            <option value="Hack">Minha prima tem uma conta</option>
+            <option value="Hack">Meu pai tem uma conta</option>
+            <option value="Hack">Minha mãe tem uma conta</option>
         </select>
 
 
@@ -105,6 +111,52 @@
 
         <p>De a descrição da sua conta</p>
         <textarea name="descrição" cols="30" rows="10">teste</textarea>
+
+        
+        
+    </form>
+
+    <hr>
+
+    <form method="GET" action="para.php">
+
+    <!-- A tag "feildset" ele cria um conjunto de campos demarcando-os 
+        e  a tag legend leganda a tag feildset-->
+    <fieldset>
+        <legend>Dados Pessoal</legend>
+        <label >
+            Primeiro nome: <br>
+            <input type="text" name="name">
+        </label>
+
+
+        <label >
+            Sobrenome: <br>
+            <!--O atributo required torna o campo obrigatorio
+                Com o atributo "minlength" vc pode colocar o numero minimos de carcteres que o 
+                campo aceita e "maxlength" a maxima -->
+            <input type="text" name="lastname" required minlength="2" maxlength="5">
+        </label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Dados da Empresa</legend>
+        <label >
+            Nome da empresa: <br>
+            <input type="text" name="companyname">
+        </label>
+
+
+        <label >
+            Cargo na empresa: <br>
+            <input type="text" name="companyjobtitle">
+        </label>
+
+
+    </fieldset>
+
+    <input type="submit" value="Cadastrar">
 
     </form>
 

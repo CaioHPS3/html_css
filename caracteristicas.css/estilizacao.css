@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+.box {
+    width: 50%;
+    height: 300px;
+    font-size: 20px;
+    background-color: aqua;
+}
+.box-interno {
+    background-color: #999;
+    width: 50%;
+    height: 50%;
+}

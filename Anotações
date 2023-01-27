@@ -27,3 +27,59 @@ CSS:
 		Largura de uma tag podendo ser definida por pixel, porcentagem, automatico e centimetros
 	height
 		Altura de uma tag podendo ser definida por pixel, porcentagem, automatico e centimetros
+
+Display: https://blog.betrybe.com/css/css-display/
+	A propriedade display é utilizada para indicar a forma como os elementos 
+	HTML serão dispostos(organizados) na página ou em espaços delimitados.
+	Por essa característica, é um recurso essencial para manter a organização dos elementos na página.
+		Display="Valores"
+	valores;
+	block:
+		O elemento gera uma caixa de elemento de bloco, gerando quebras de linha 
+		antes e depois do elemento quando no fluxo normal.(Um em baixo do outro)
+	Inline:
+		O valor CSS display inline é utilizado quando queremos que os elementos fiquem posicionados
+		lado a lado. o próximo elemento estará na mesma linha se houver espaço.
+	Inline-block:
+	Ao utilizarmos o valor CSS display inline-block podemos organizar os elementos lado a lado 
+	e definirmos as propriedades de largura e altura, pois elas não serão ignoradas pelo navegador.
+	(Vão ficar lado a lado só que eu posso definir o tamanho das linhas)
+	Flex:
+	O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo
+	com o modelo flexbox. (Na prática, ao definirmos um elemento com esse valor, ele funciona
+	como um container para agrupar os elementos filhos, que são considerados flex-itens
+	e são organizados nos sentidos horizontal ou vertical.)
+
+	modelo flexbox;
+	flex-direction: determina a direção em que os elementos serão dispostos, que pode ser row (linha) ou column (coluna), ou ainda, row-reverse e column-reverse para exibir os itens na posição invertida;
+	flex-wrap: para definir como o conteúdo de um elemento será exibido dentro do espaço. Em caso de texto, por exemplo, ele pode ser forçado a permanecer na mesma linha ou dividido conforme a necessidade. Os valores possíveis são: nowrap para não quebrar a linha, wrap para quebrar e wrap-reverse, em que o conteúdo é preenchido no sentido de baixo para cima;
+	flex-flow: representa uma forma abreviada de escrever os valores dos atributos flex-direction e flex-wrap;
+	justify-content: indica como os elementos filhos serão alinhados horizontalmente no espaço definido como container. Os valores possíveis são: flex-start, flex-end, center, space-between, space-around e space-evenly;
+	align-itens: representa o alinhamento vertical dos elementos pertencentes ao container. Os valores possíveis são: flex-start, flex-end, stretch, center e baseline;
+	align-content: funciona semelhante ao align-itens, entretanto, alinha o conteúdo verticalmente em relação às linhas.
+
+	Outline:
+	A propriedade CSS outline é uma propriedade abreviada para configurar uma ou mais 
+	das propriedades de contorno outline-style (en-US), outline-width (en-US) e outline-color 
+	(en-US) em uma única declaração. Na maioria dos casos o uso abreviado é preferível e 
+	mais conveniente.
+	EX: largura | estilo | cor 
+		outline: 1px solid white;
+	
+	----------------------------------------------------------------------------------------
+	Unidades de medida 
+		Absolutas(Não sobre alteração externa(da extrutura do site)):
+			px= pixel
+			pt= não sei o nome mas geramente usada para texto
+			in= polegada
+			cm= centimetros
+			mm= milimetro
+		Relativas:
+			em= O tamanho da fonte é baseado no tamanho do "pai" do elemento.
+			vh= viewport(Unidade de medida que pega toda a ALTURA disponivel da tela do usuario, se ajustando
+			de acordo com a altura disponivel).
+			vw= Unidade de medida que pega toda a LARGURA disponivel da tela do usuario, se ajustando
+			de acordo com a largura disponivel.
+			OBS:
+			Os valore são pegos em porcentagem sendo 100vh ou 100vw, 100% mas diferente da porcentagem
+			normal os valores vão se ajustando ao tamanho da tela disponivel.
