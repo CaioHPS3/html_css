@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--O viewport em síntese vai adaptar a o codigo ao tamanho da tela do usario
+    com o atrubuto "contet" que vai recaber o width=device-width(Vai fazer a 
+    adaptação de fato), initial-scale=1.0(Vai impobilita o usuario de dar zoom na pagina) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilizacao.css">
+    <title>CSS</title>
+</head>
+<body>
+    <h1> Testando recusividade </h1>
+    <!--O "picture" e um containe que funciona "como se fosse" um if else, so que PARA IMAGEM
+    sendo a tag "source" onde vai ser colocada as condições(especificamente no atributo "media")
+    o atributo "srcset" vai manda a imagem corespondente a "condição" aceita, 
+    gerando imagens responsivas
+
+    OBS: Existe containes parecidos como o video e audio que vão utilizar o source do "mesmo jeito" -->
+    <picture>
+        <source media="(min-width: 650px)" srcset="pac.jpg">
+        <source media="(min-width: 450px)" srcset="playstation.jpg">
+        
+        <img src="./unnamed.jpg"> 
+
+    </picture>
+    
+</body>
+</html>

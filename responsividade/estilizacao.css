@@ -1,0 +1,56 @@
+body {
+    margin: 10px;
+    background-color: chocolate;
+    color: green;
+    font-size: 10px;
+
+}
+
+img {
+    width: 400px;
+    height: 400px;
+
+    /*A tag "object-fit" vai fazer alterações na imagem adaptando ela para o tamanho sem perder
+    a qualidade(sem ficar distoscida) tendo varios atribitos para fazer essa modificação;
+    Fill -> formato padrão, vai distocer a imagem para ele ficar no espaço desejado.
+    Contain -> Vai diminuir a imagem ate um tamanho proporcional ao espaço delimitado fazendo com 
+    que não tenha distosção mas não ocupando todo o espaço delimitado.
+    Cover -> Vai deixar a imagem né uma tamanho proporcional ao espaço delimitado ocupando todo
+    o espaço mais cortando a imagem centralizando.
+    None -> Vai deixar a imagem do tamanho original mas cortando centralizando para caber no espaço
+    desejado*/
+    object-fit:cover;
+}
+
+/*A tag "@media" e como se fosse o if e else do css para deixa o site responsivo usando o css
+colocando condições, a condição sendo satisfeita o css e refeito com o que tive dentro da tag
+OBS: vc tem que escrever todo o codigo  de novo com as alteraçãoes */
+
+
+/*  min= condição é valida ate o minino (o valor estipulado), "se for menor que o minimo não da"
+    max= condição é valida quando estiver dentro do valor max, "se for maor que o maximo não da"*/
+
+@media (min-width: 1000px) {
+    body {
+        background-color: red;
+        color: blue;
+        font-size: 20px;
+    }
+}
+
+/*Pode ser colocado mais de uma condição*/
+@media (min-width: 650px) and (max-width:999px) {
+    body {
+        background-color: red;
+        color: blue;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        background-color: rebeccapurple;
+        color: royalblue;
+        font-size: 12px;
+    }
+}

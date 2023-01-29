@@ -27,6 +27,7 @@ CSS:
 		Largura de uma tag podendo ser definida por pixel, porcentagem, automatico e centimetros
 	height
 		Altura de uma tag podendo ser definida por pixel, porcentagem, automatico e centimetros
+	----------------------------------------------------------------------------------------
 
 Display: https://blog.betrybe.com/css/css-display/
 	A propriedade display é utilizada para indicar a forma como os elementos 
@@ -83,3 +84,12 @@ Display: https://blog.betrybe.com/css/css-display/
 			OBS:
 			Os valore são pegos em porcentagem sendo 100vh ou 100vw, 100% mas diferente da porcentagem
 			normal os valores vão se ajustando ao tamanho da tela disponivel.
+	----------------------------------------------------------------------------------------
+	Layout
+		Responsivo: Ele vai se adaptando de acordo com o tamanho da tela de manera fluida,
+		respondendo a todos os tamanhos.
+		Adaptativo: Tamanhos pré-definidos são colocados assim de acordo com o tanho da tela disponivel
+		ele se ajusta para um dos tamanhos pré-definidos.(Se adaptando de acordo com o tamanho da
+		tela).
+		OBS: melhor forma é ir mesclando os dois
+
