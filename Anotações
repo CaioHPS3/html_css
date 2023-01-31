@@ -92,4 +92,34 @@ Display: https://blog.betrybe.com/css/css-display/
 		ele se ajusta para um dos tamanhos pré-definidos.(Se adaptando de acordo com o tamanho da
 		tela).
 		OBS: melhor forma é ir mesclando os dois
+	Header
+		Tag usanda para fazer o cabeçario do seu site, ajuda os motores de busca a saber do que seu
+		site se  trata.
 
+	Nav
+	O Elemento HTML de Navegação (<nav>) representa uma seção de uma página que aponta para outras
+	páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.
+	Exemplo:
+			<nav>
+				<ul>
+	  				<li><a href="#">Página inicial</a></li>
+	  				<li><a href="#">Sobre</a></li>
+	  				<li><a href="#">Contato</a></li>
+				</ul>
+  			</nav>
+
+	Footer
+		Tag usada para o roda pé do site
+
+	Sectinon
+		Tag usada para divir seções do seu site, ajudando os motores de busca.
+		EX: Um site sobre bolo, e vai sala de bolos de doce e depois de bolo salgado
+			divindo por senções o motores de buscas vão entender que são assuntos diferentes.
+	
+	Article
+		Tag onde vc vai colocar o conteudo principal da pagina, onde o moto de busca vai procurar
+		as palavras chaves.
+
+	Aside
+		Tag onde vc vai indicar coteudos secundarios da sua pagina.
+	

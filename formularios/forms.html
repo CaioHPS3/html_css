@@ -32,8 +32,10 @@
             email(igual o text só que formatado para email), tel(telefone sem formatação), date(data)
 
         
-            tag nome da a nomenclatura do input
-            tag value informa o "tipo" do input 
+            O atributo "nome" da a nomenclatura do input
+            O atributo "value" ela pré preenche  o  input
+            O atributo "placeholder" serve para colocar um texto por baixo do input
+            o atributo "autofocus" serve para deixar pré selecionado o input
         
             A tag label é ultilizada para colocar o titulo nos campos a serem preenchidos,
             dessa forma a tag pode (1)englobar o input ou utilizando o atributo "for" ultilzando 
@@ -41,7 +43,7 @@
             <!-- 1 -->
         <label>
             Digite seu nome:<br/>
-            <input type="text" name="nome-do-usario" value="Nome"/> 
+            <input type="text" name="nome-do-usario" placeholder="Nome" autofocus/> 
         </label>
         <!-- 2 -->
         <label for="email">Digite seu email:<br/>

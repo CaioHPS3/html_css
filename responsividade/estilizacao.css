@@ -3,6 +3,7 @@ body {
     background-color: chocolate;
     color: green;
     font-size: 10px;
+    display: flex;
 
 }
 
@@ -52,5 +53,26 @@ OBS: vc tem que escrever todo o codigo  de novo com as alteraçãoes */
         background-color: rebeccapurple;
         color: royalblue;
         font-size: 12px;
+    }
+}
+
+/*  O atributo "orientation" é ultilizando para verificar qual a direção 
+    predominate a horinzontal ou vertical com base no heidth e no width*/
+
+
+/*  landscape= a orientação da tela esta predominate na horizontal,
+    se o width estiver maior que o heidth (na horintal) o que estiver no "@media"
+    vai ser feito*/
+@media  (orientation: landscape) {
+    body {
+        flex-direction: row;
+    }
+}
+/*  portrait= a orientação da tela esta predominate na vertical
+    se o heidth estiver maior que o width (na vestical) o que estiver no "@media"
+    vai ser feito**/
+@media  (orientation: portrait) {
+    body {
+        flex-direction: column;
     }
 }
