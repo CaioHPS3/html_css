@@ -22,7 +22,10 @@ input[type="text"], textarea, select {
     width: 500px;
     font-size: 15px;
     border: 2px solid #CCC;
-    /*A propriedade CSS outline é uma propriedade abreviada para configurar 
+    /*
+        Importante para tira as bodas/contornos depois que vc seleciona um input
+    
+    A propriedade CSS outline é uma propriedade abreviada para configurar 
     uma ou mais das propriedades de CONTORNO(Anotação)*/
     outline:0;
     margin-top: 5px;
@@ -55,3 +58,23 @@ legend {
     color: red;
     padding: 5px;
 }
+
+/* 
+
+Tutotial de como colocar um pgn no input
+
+Você pode fazer em CSS usando as propriedades de estilo de fundo para colocar um avatar dentro do input. 
+As propriedades são:
+
+background-image: A propriedade define uma ou mais imagens de fundo em um elemento. 
+Aqui será usada a imagem dum avatar anônimo.
+
+background-repeat: A propriedade define como as imagens de fundo são repetidas. 
+Nesse caso (no-repeat) sem repetições.
+
+background-position: A propriedade define a posição inicial para cada imagem de fundo. 
+No caso left, estará posicionada a esquerda.
+
+background-size: A propriedade define o tamanho da imagem de fundo do elemento. 
+Aqui 1.3em. Veja Valores e unidades CSS. 
+*/

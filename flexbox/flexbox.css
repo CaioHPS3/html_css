@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    /*Por padrão o display flex vai organizar o cotainer por linhas (lado a lado)*/
+    flex-direction:column;
+    /*O "flex-direction" vai definir a direção da organização do container podendo ser de 4 jeitos
+        row= Organizado em linha(lado a lado o padrão)
+        colums= Organizado em coluna(Um a baixo do outro)
+        row-reverse= Organiza em linha só que do final para o início
+        colums= Organiza em coluna de baixo para cima*/
+    flex-wrap: wrap;
+    /*O "flex-wrap" vai organizar o espaço dos conteudos das divs, caso tamanho dentro da div exceda o
+    tamanho container tendo os seguintes valores
+    nowrap= vai forçar permanecer na mesma linha fazendo ajuste de tamanho para isso (formato padrão)
+    wrap= vai fazer uma quebra de linha dos vez que for excedido
+    wrap_reverce= vai fazer a quebra de linha só que vai preencher de baixo para cima
+    */
+    flex-flow: row wrap;
+    /*Ele é a forma a abreviada do flex-directino e wrap, colocando os mesmo valores separados por
+    espaço*/
+    justify-content:center;
+    /*  O justify-content vai fazer o alinhameno na direção(flex-derection) do container */
+    align-items: center;
+    /*  O align-items vai fazer o alinhameno na direção contaria(flex-derection) do container 
+    
+    Ex: Se o DIRECTION estiver orgainizado em linha e o JUSTIFY for center vai centralizar
+    horizontalmete por ser uma linha se for uma coluna ele vai centralizar na vestical
+    o ALIGN center vai entralizar o inverso do DIRECTION*/
+    background-color: #dddddd;
+    margin: 10px;
+    height: 500px;
+}
+
+.container div {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+
+/*
+.div1 {
+    /*O flex funciona como se fosse grupos onde quem estiver no grupo no mesmo grupo vão 
+    ter o mesmo tamanho(ocupando todo o container) sendo iguais (quem estiver no mesmo grupo) 
+    Caso tenho outra div em outro grupo ex:flex:2: ela vai ser duas vezes maior em relação a quem 
+    esta no grupo 1(Mas sempre em relação ao tamanho do container)
+    flex: 1;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.div2 {
+    flex:1;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.div3 {
+    flex:2;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+*/
+.containeer {
+    display: flex;
+    flex-flow: row;
+    justify-content:center;
+    align-items: center;
+    background-color: #dddddd;
+    height: 500px;
+}
+.containeer div {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+.containeer .div10 {
+    background-color: red;
+    align-self: flex-start;
+    /*O align permite que vc faça alterações de organização dentro de uma div especifica podendo 
+    muda o lugar dela mesmo tendo um align geral*/
+    order: -1;
+    /*O order vc pode muda o local da div sem precisado do html, onde por padrão o order 
+    e 0 assim se uma div receber um valor negativo ela pula para frente e positivo para faz*/
+    align-content: center;
+    /*O align é usado quando vc usa o "wrap" quando vc tem que organizar mais de uma linha*/
+}

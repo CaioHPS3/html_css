@@ -26,8 +26,12 @@ p {
     letter-spacing: 2px;
     /*Coloca um exparçamento entre as palavras*/
     word-spacing: 5px;
+    /*Coloca um exparçamento entre as linhas*/
+    line-height: normal;
     /*Coloca uma sobra no texto, tendo 3 parametros, (lado, baixo, dencidade e cor)*/
     text-shadow: 2px 3px 3px red;
+    /*Faz a quebra de linha de uma palavra muito grande*/
+    word-wrap:break-word;
 
 }
 a{

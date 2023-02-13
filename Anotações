@@ -123,3 +123,10 @@ Display: https://blog.betrybe.com/css/css-display/
 	Aside
 		Tag onde vc vai indicar coteudos secundarios da sua pagina.
 	
+	Tag para Citações;
+	
+	Q
+		Ela coloca o texto entre aspas e indica para os buscadores que aquela frase é uma citação
+
+	blockquote
+		Usada para sitações maiores e com links, podendo ocolocar o link na tag com o atributo "cite"
