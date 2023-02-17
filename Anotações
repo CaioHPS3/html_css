@@ -28,8 +28,9 @@ CSS:
 	height
 		Altura de uma tag podendo ser definida por pixel, porcentagem, automatico e centimetros
 	----------------------------------------------------------------------------------------
+	Flexbox:
 
-Display: https://blog.betrybe.com/css/css-display/
+	Display: https://blog.betrybe.com/css/css-display/
 	A propriedade display é utilizada para indicar a forma como os elementos 
 	HTML serão dispostos(organizados) na página ou em espaços delimitados.
 	Por essa característica, é um recurso essencial para manter a organização dos elementos na página.
@@ -85,6 +86,7 @@ Display: https://blog.betrybe.com/css/css-display/
 			Os valore são pegos em porcentagem sendo 100vh ou 100vw, 100% mas diferente da porcentagem
 			normal os valores vão se ajustando ao tamanho da tela disponivel.
 	----------------------------------------------------------------------------------------
+	Significado de cada tag:
 	Layout
 		Responsivo: Ele vai se adaptando de acordo com o tamanho da tela de manera fluida,
 		respondendo a todos os tamanhos.
@@ -112,6 +114,7 @@ Display: https://blog.betrybe.com/css/css-display/
 		Tag usada para o roda pé do site
 
 	Sectinon
+
 		Tag usada para divir seções do seu site, ajudando os motores de busca.
 		EX: Um site sobre bolo, e vai sala de bolos de doce e depois de bolo salgado
 			divindo por senções o motores de buscas vão entender que são assuntos diferentes.
@@ -130,3 +133,125 @@ Display: https://blog.betrybe.com/css/css-display/
 
 	blockquote
 		Usada para sitações maiores e com links, podendo ocolocar o link na tag com o atributo "cite"
+
+	-----------------------------------------------------------------------------------------------------
+	Seletores:
+		No css vc pode fazer a estilização selecionando pelo atributo(email, nome, href etc)
+
+		ex:
+			[href] {
+				color: red:
+			}
+		Utilizando as chaves das as tags que tiverem um href vão ser motificadas, vc pode especificar
+		também quais tag vão ser modificadas utilizando, os id, class ou a propria tag
+
+		ex:
+			.texto[href] {
+				color: red:
+			}
+			#titulo[href] {
+				color: red:
+			}
+			p[href] {
+				color: red:
+			}
+			
+		Podendo também especificar dentro dos atributos as respostas fazendo com que somente atributo com
+		aquela resposta seja motificado
+
+		ex:
+		[type=text] {
+			color: red:
+		}
+		
+		Seleção do vazio
+
+			Vc pode seleciona um elemento vazio usando "enpty" ele vai selaciona uma tag que receba o enpty
+			fazendo assim a selação daquele um elemnto vazio com esta com aquela tag
+			ex:
+				div:enpty{
+					background-color:red;
+				}
+
+		Selação da primeira letra de um texto(Selação do primeiro "conteudo" nesse caso de uma letra)
+			Vc pode fazer a seleção da primeita letra de tag, id, ou class utilizando "first-letter" antecedido
+			de dois ":" (fazendo com que possa modificar o (:: = conteudo ) que estar la)
+			ex:
+				p::first-letter{
+					font-size:30px;
+				}
+			
+
+		Selação do primeiro e ultimo (elemento)
+			Vc pode fazer a selação do proprio elemento exemplo: tag, class com "first-child" para o 
+			primeiro e "last-child" para o ultimo, antecedidos por um ":" (fazendo com que possa modificar o ( : = elemnto))
+			ex:
+				div:first-child{
+					border-top-radius:20px;
+				}
+				div:last-child{
+					border-bottom-radius:20px;
+				}
+		Seleção negativa
+			Fazer a seleção de todo os elementos (exeto o desejado) usando o ":not()"
+			ex:
+				body:not(#text){
+					font-family: arial;
+				}
+		Selação NTH
+			Com a selação NTH vc pode seleciona um elemento de forma numerica sendo o numero total
+			a quantidade de tags ou class que se repete, utilizado (:nth-child) de baixa para cima ou
+			(nth-last-child) de baixo para cima.
+
+			Os valores que podem ser colados por o (odd) que ira selecionar todos os irmão pares
+			e (even) os irmãos impares.
+			
+			ex:(supondo que temos 4 div)
+
+				div:nth-child(2){
+					background-color:red;
+				}
+		Seletor Before/After
+			Os seletores before e after cria um novo elemento antes(before) e depois(after) o qual não é
+			contado pelo html, mas aparecendo na tema com o atributo "content" podendo ser estilizado.
+			ex:
+				div::before {
+					content:"->":
+					background-color:blue;
+				}
+				div::after {
+					content:"<-":
+					background-color:blue;
+				}
+		Transform:
+			Com ele podemos trabalhar com efeitos geometricos de um elemento ou tag, podendo aumenta ou 
+			diminuir, rotacionar etc, podendo distocer nos 3 eixos x, y e z.
+				Scale; 
+					Altera o tamanho do objeto, scale(1) e o padrão, você pode passar mais de um parametro
+					sendo cada parametro um eixo que vai ser modificado scale(1(x = horinzontal), 1(y = vestical))
+					podendo distocer o elemento, tendo também o scalex(), scaley(), scalez(), scale3d().
+				Rotate;
+					Altera a rotação do objeto as rotações são feitas no sentido horario usando a unidade de
+					medida ("deg" = ° = graus), tendo também rotatex(), rotatey(), que seria uma rotação no
+					proprio eixo(ex: rotação na horintal seria com se tivesse um palito na horintal do objeto 
+					e vc girasse o palito(em obejtos 2d se girarmos a 90° ele vai subi por não ter profundidade)).
+					ex:
+						rotação de 30° sentido horario
+						div{
+							transform:rotate(30deg);
+						}
+						rotação de 30° sentido anti-horario
+						div{
+							transform:rotate(-30deg);
+						}
+				Skew;
+					Faz uma rotação em deg mas com se fosse um italico;
+			Box-sizing:
+				Box-sizing e utilizado para decidir ou não o tamnaho real de um elemento sendo que por
+				padrão o box-sizing:content-box;, tendo também o box-sizing:;
+					content-box:
+						Considera o tamanho declarado do objeto sem interferencia de bordas e padding
+						se forem adicionado adicionado ao tamanho do objeto aumentando-o.
+					border-Box
+						Considera o tamanho declarado como absoluto não sendo interferido por borda ou padding
+						se forem adicionado vai se ao tamanho adeclarado para que não o utrapasse.

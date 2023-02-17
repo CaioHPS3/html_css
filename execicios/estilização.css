@@ -1,0 +1,16 @@
+body {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+
+table {
+    width: 500px;
+}
+td, th{
+    border: 1px solid #000;
+}
+
+tr:nth-child(even){
+    background-color: aqua;
+}
+
