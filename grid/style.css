@@ -1,0 +1,218 @@
+
+/* No container vc vai colocar as regras gerais da distribuição dos item */
+.container {
+    /* Abilitando o grid */
+    display:grid;
+    /* regra geral
+        Dica: Imagina o grid como uma tabela o qual vc pode manipular as colunas e linhas.
+
+        Organização por coluna: (grid-template-columns:organização;)
+
+        Na organização por coluna os dados(os tamanhos) passado são referente a "largura" da coluna
+        podendo ser passado N dados(tamanhos) o qual N representa o numero de colunas, desta forma os itens que 
+        estão naquela coluna vão ser afetado independente da linha.
+
+        ex: Nesse exemplo temos a definição de uma organização de 4 colunas 
+            sendo a primeira com uma largura de 100px e as outra com seus tamanho subsequemtes 
+            sendo assim em todas as linhas vão ter 4 colunas com essa caracteristicas em 
+            regra geral.  
+            
+            (grid-template-columns: 100px auto 500px 100px;)
+
+
+        Organização por linha: (grid-template-row:organização;)
+
+        Na organização por linha os dados(os tamanhos) passado são referente a "altura" da linha
+        podendo ser passado N dados(tamanhos) o qual N representa o numero de linhas, desta forma os itens
+        que estão naquela linha vão ser afetado independente da coluna. 
+        
+        OBS: Caso haja mais linhas do que N as outras linhas vão ficar ne um tamanho padrão do item.
+        
+        ex: Nesse exemplo temos a definição de uma organização de 4 linhas 
+            sendo a primeira com uma altura de 50px e as outra com seus tamanho subsequemtes 
+            sendo assim as QUATRO PRIMEIRAS LINHAS vão ter as seguintes alturas, independente de coluna,
+
+            (grid-template-rows: 50px 70px 30px 40px;)
+        
+        OBS: E conselhado organizar um grid por coluna depois por linha
+        pois vc ja saberar quantas colunas tera, por linha ja fica um pouco mais dificio saber
+        pois depende da quantidade de colunas e de itens*/
+
+    grid-template-columns: 100px auto 500px 100px;
+    /* grid-template-rows: 50px 100px; */
+
+    /* 
+                        FR
+
+    Vc também pode usar o a unidade "fr" para passar os tamanhos
+        ex: Nesse exemplo temos 3 colunas as quais a primeira recebe 1fr
+            a seguda 2fr sendo duas vezes maior que a primeira e assim por diante.
+    
+            grid-template-columns: 1fr 2fr 3fr;
+        
+        OBS: A unidade de media "fr" funciona como se fosse o "flex=1" no fexbox
+        dessa forma se adapitando ao tamanho disponivel. podendo ser colocado um no proprio container.
+    */
+    /*                          REPEAT  
+
+        O "repeat" ajuda na abreviação das declaração de tamanho no grid, recebendo dois(ou mais)
+        parametros a quantidade de vezes que vai repedir e o tamanhos que vão repetir
+        ex:
+            Ele vai criar 3 colunas com o tamanho de 100px
+
+            grid-template-columns: repeat(3, 100px); aquivalente a grid-template-columns: 100px 100px 100px;
+
+            Ele vai criar 4 colunas sendo 3 de 100px e uma de 200px
+
+            grid-template-columns: repeat(3, 100px) 200px;
+
+            Ele vai criar 4 colunas sendo uma de 2fr  duas de 1fr e uma de 500px
+
+            grid-template-columns: 2fr repeat(2, 1fr) 500px;
+
+            Ele vai criar 4 colunas sendo uma sequecia uma de 100px seguida de uma de 200px e depois (repete
+            a mesma sequecia).
+
+            grid-template-columns: repeat(2, 100px 200px);
+
+            Nesse caso ele vai criar N colunas (enquanto tive espaço ou itens) sendo cada de 100px de largura
+
+            grid-template-columns: repeat(auto-fill, 100px);
+
+    */
+    
+    /* Com o grid-auto-rows vc pode definir um tamanho fixo de altura 
+    para todas as linhas
+    OBS: Independente do conteudo que estiver dentro do item ele não vai mudar */
+    grid-auto-rows: 150px;
+    /* Utilizando o minmax vc pode colar uma variação de tamanho variando de acordo com o conteudo dentro
+    do item só podendo variar na marge que vc estipulou fazendo com que (todas as linhas assumam aquele 
+    valor)
+     */
+    grid-auto-rows: minmax(100px, 300px);
+    /* Utilizando o auto no minmax faz com que a linha se (adapte ao tamanho do conteldo dentro do item)
+    fazendo as outra linhas ficarem no tamanho minimo ou ne um que respeite os seus respectivos conteudo
+    dos itens  */
+    grid-auto-rows: minmax(100px, auto);
+
+    /* O minmax pode ser usado na criação de colunas também fazendo com que elas se adapte ao tamanho
+    do conteudo na largura também */
+
+    grid-template-columns: repeat(4, 1fr);
+    
+    /* O "gap" funciona como um marge fazendo o espaçamento entre row(linhas) nos item dentro do container */
+    row-gap: 10px;
+    grid-row-gap: 10px;
+    /* O "gap" funciona como um marge fazendo o espaçamento entre columns(colunas) nos item dentro do container */
+    column-gap: 10px;
+    grid-column-gap:10px;
+    /* Podendo ser resumido os dois gap para */
+    gap: 10px 10px;
+    grid-gap: 10px 10px;
+}
+/* No item vc pode colocar uma regra diferente fazendo com que ele tome outra posição ou tamanho
+    etc */
+.item {
+    background-color: brown;
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+}
+/* 
+.item1 {
+    background-color: aqua;
+    color: black;
+
+     Aprendendo a "mescla cedulas" 
+        Aqui vc pode definir onde uma cedula(Item) vai começa e onde via termina
+        usando o start e o end utilizando a numero das minhas onde eles estão ate onde ele vai
+
+        fazendo a mesclagem do primeiro item para que ele ocupe toda a primeira linhas
+   
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.item3 {
+    background-color: blueviolet;
+
+     Fazendo a mesclagem de uma linha vc precisa estabelece (fixar) a posição dele na tabela
+        depois estabelecer o tamanho do item nas linhas.
+
+        fazendo com que o item3 va ate o final das colunas e ocupando o tamanho de duas linhas da linha
+        2 a 5
+    
+   
+
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+.item8 {
+    background-color: #000;
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 5;
+    grid-row-end: 7;
+
+} */
+
+.item7 {
+    /* Vc pode fazer a declaração toda em uma variavel so 
+    resumindo:
+        grid-column-start: 3;
+        grid-column-end: 4; 
+    para:
+
+        grid-column:3 / 4;
+    Sendo o primiero o inicio / final    
+    */
+    grid-column:3 / 4;
+    background-color: blue;
+    grid-row: 1/5;
+
+}
+
+.item5 {
+    /* Com o span vc pode declara a mesclagem ate o elemeto desejado.
+    em vez de dizer ate que coluna, vc pode dizer ate que elemento ele vai
+
+    Da coluna 1 parando na a coluna 3 
+    grid-column: 1 / 3;
+    
+    Da coluna 1 ate o elemento 2 todo
+    grid-column: 1 / span 2;
+
+    Os dois são iguis no resultado final
+
+     */
+    grid-column: 1 / span 2;
+    background-color: red;
+    grid-row:4/5; 
+}
+
+.item11 {
+    /* Pode ser utilizado também o grid-area o qual resume a declaração de linhas e colunas
+    sendo na seguinte ordem:
+        grid-row-start: 3;      Primeira linha
+        grid-column-start: 4;   Primeira coluna
+        grid-row-end: 5;    Ultima linha
+        grid-column-end: 5; Ultima coluna
+    */
+
+    grid-area: 3 / 4 / 5 / 5;
+
+    /*
+        Esses sendo equivalentes
+
+    grid-column-start: 4;
+    grid-column-end: 5;
+    
+    grid-row-start: 3;
+    grid-row-end: 5; */
+    background-color:chocolate;
+}

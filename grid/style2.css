@@ -1,0 +1,56 @@
+.container  {
+    background-color: #ccc;
+    display: grid;
+    grid-gap:10px;
+
+    /* Com o template area vc pode organizar o template do seu site só usando grid pelo css, 
+    fazendo a nomenclatura com o grid-area:; na classe ou nas tag que vão ser modificada,
+    assim vc ultilizando os nomes do grid-area no grip-template-areas ne um formadoto de 
+    tabela(Linhas na horintal e colunas na vestical )organizando os conteudos  vc pode 
+    ultizar ponto(".") para indicar um local vazio dentro da tabela*/
+    grid-template-areas: 
+    
+    "header header header header"
+    "menu content content content"
+    "footer footer footer anuncio"
+    ;
+}
+
+.item {
+    background-color: blue;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+
+}
+
+/* Usando "grid-area:;" vc vai nomer aquela classe/id ou tag para utilizar o grid template
+  */
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: menu;
+}
+section {
+    grid-area: content;
+}
+footer {
+    grid-area: footer;
+}
+.item .anuncio {
+    grid-area: anuncio;
+}
+
+/* Resposividade do grid, estrutura para celular */
+@media (max-width:750px) {
+    .container{
+        grid-template-areas:
+        
+        "header header header menu"
+        "content content content content"
+        "anuncio footer footer footer"
+        ;
+    }
+}
